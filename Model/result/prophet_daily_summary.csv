@@ -1,0 +1,4 @@
+model,dataset,target,horizon,lookback,mean_smape,median_smape,mean_mase,median_mase,mean_rmse,median_rmse,mean_rmsle,median_rmsle
+Prophet,retail_inventory_daily,Units Sold,7,90,103.851,105.6758,2.4552,2.3551,165.1003,145.2293,2.3256,2.3332
+Prophet,retail_inventory_daily,Units Sold,14,90,128.9633,129.7991,5.1079,4.0222,418.5134,281.4403,2.8658,2.8188
+Prophet,retail_inventory_daily,Units Sold,28,90,157.6953,158.6807,17.942,4.8447,1473.4007,343.4219,3.5198,3.5889
