@@ -3,6 +3,7 @@
 Methods | Metrics | Times (s)
 --------|---------|-----------
 
+### Source code
 
 https://github.com/heliphix/btc_data/blob/main/Results_LSTM.ipynb 
 
@@ -14,7 +15,7 @@ https://github.com/TongjiFinLab/FinTSB có XGBoost + chronos
 
 
 ### Checklists
+[] dummy baseline
 [] kiểm tra snaive và naive xem metrics có sai ko
-[] thử chronous trước - prophet - LSTM
+[] thử chronous trước - prophet - LSTM unvariant
 
-[]
