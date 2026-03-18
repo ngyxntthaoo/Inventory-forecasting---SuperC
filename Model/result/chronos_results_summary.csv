@@ -1,0 +1,4 @@
+model,dataset,target,horizon,mean_smape,median_smape,mean_mase,median_mase,mean_rmse,median_rmse,mean_rmsle,median_rmsle
+Chronos-Bolt-Small,retail_inventory_daily,Demand,7,29.7727,28.8819,0.7087,0.6739,37.4421,35.5030,0.3697,0.3432
+Chronos-Bolt-Small,retail_inventory_daily,Demand,14,30.0915,29.6917,0.7159,0.6884,38.1184,37.1219,0.3786,0.3650
+Chronos-Bolt-Small,retail_inventory_daily,Demand,28,30.9524,30.9804,0.7330,0.7209,39.6030,39.7859,0.3960,0.3823
