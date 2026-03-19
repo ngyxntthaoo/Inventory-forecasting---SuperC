@@ -1,0 +1,4 @@
+model,store,product,horizon,smape,mase,rmse,rmsle
+LSTM-Univariate,S001,P0001,7,38.919,0.8773,42.1564,0.5214
+LSTM-Univariate,S001,P0001,14,34.9494,0.8099,37.8072,0.4635
+LSTM-Univariate,S001,P0001,28,41.5041,0.9196,45.4749,0.5398
