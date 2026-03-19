@@ -1,4 +1,4 @@
-model,dataset,target,horizon,lookback,mean_smape,median_smape,mean_mase,median_mase,mean_rmse,median_rmse,mean_rmsle,median_rmsle
-SNaive,retail_inventory_daily,Units Sold,7,30,50.3675,49.9691,1.0754,1.0608,53.1278,53.3744,0.7968,0.7409
-SNaive,retail_inventory_daily,Units Sold,14,30,52.7625,50.9495,1.0678,1.0619,54.954,54.6941,0.8194,0.7478
-SNaive,retail_inventory_daily,Units Sold,28,30,50.8396,48.9961,1.0219,0.9733,54.6577,53.8781,0.7967,0.7266
+model,dataset,target,horizon,mean_smape,median_smape,mean_mase,median_mase
+SNaive,retail_inventory_daily,Units Sold,7,50.3675,49.9691,1.0045,1.0129
+SNaive,retail_inventory_daily,Units Sold,14,52.7625,50.9495,1.0514,1.0516
+SNaive,retail_inventory_daily,Units Sold,28,50.8396,48.9961,1.0414,1.0372

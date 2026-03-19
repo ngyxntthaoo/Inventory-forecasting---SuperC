@@ -2,7 +2,7 @@ import warnings
 import numpy as np
 import pandas as pd
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
-from metrics import smape, mase, rmse, rmsle
+from metrics import smape, mase
 
 warnings.filterwarnings("ignore")
 
@@ -45,15 +45,13 @@ def rolling_eval(series, split_end, horizon, lookback, model_fn):
         last_train = train
         t += pd.Timedelta(days=horizon)
     if not all_fc:
-        return {k: np.nan for k in ["smape", "mase", "rmse", "rmsle"]}
+        return {k: np.nan for k in ["smape", "mase"]}
     fc_arr, ac_arr = np.array(all_fc), np.array(all_ac)
     lag   = min(LAG, len(last_train) - 1)
     denom = np.mean(np.abs(last_train[lag:] - last_train[:-lag])) or 1.0
     return {
         "smape": (2 * np.abs(fc_arr - ac_arr) / (np.abs(fc_arr) + np.abs(ac_arr) + 1e-8)).mean() * 100,
         "mase" : np.mean(np.abs(fc_arr - ac_arr)) / denom,
-        "rmse" : np.sqrt(np.mean((fc_arr - ac_arr) ** 2)),
-        "rmsle": np.sqrt(np.mean((np.log1p(np.clip(fc_arr, 0, None)) - np.log1p(np.clip(ac_arr, 0, None))) ** 2)),
     }
 
 def ets_fn(train, h):
@@ -72,7 +70,7 @@ print("\n=== Evaluating on TEST ===")
 results, details = [], []
 for h in HORIZONS:
     lb = LOOKBACK
-    scores = {k: [] for k in ["smape", "mase", "rmse", "rmsle"]}
+    scores = {k: [] for k in ["smape", "mase"]}
     for i, sid in enumerate(series_ids):
         store, product = sid.split("_", 1)
         r = rolling_eval(series_dict[sid], VAL_END, h, lb, ets_fn)
@@ -85,13 +83,9 @@ for h in HORIZONS:
            "mean_smape":   round(float(np.nanmean(scores["smape"])), 4),
            "median_smape": round(float(np.nanmedian(scores["smape"])), 4),
            "mean_mase":    round(float(np.nanmean(scores["mase"])), 4),
-           "median_mase":  round(float(np.nanmedian(scores["mase"])), 4),
-           "mean_rmse":    round(float(np.nanmean(scores["rmse"])), 4),
-           "median_rmse":  round(float(np.nanmedian(scores["rmse"])), 4),
-           "mean_rmsle":   round(float(np.nanmean(scores["rmsle"])), 4),
-           "median_rmsle": round(float(np.nanmedian(scores["rmsle"])), 4)}
+           "median_mase":  round(float(np.nanmedian(scores["mase"])), 4)}
     results.append(row)
-    print(f"  H={h:2d} lb={lb}d | sMAPE={row['mean_smape']:.2f}% MASE={row['mean_mase']:.4f} RMSE={row['mean_rmse']:.2f} RMSLE={row['mean_rmsle']:.4f}")
+    print(f"  H={h:2d} lb={lb}d | sMAPE={row['mean_smape']:.2f}% (med {row['median_smape']:.2f}) MASE={row['mean_mase']:.4f} (med {row['median_mase']:.4f})")
 
 pd.DataFrame(results).to_csv(f"{RESULT_DIR}/ets_daily_summary.csv", index=False)
 pd.DataFrame(details).to_csv(f"{RESULT_DIR}/ets_daily_details.csv", index=False)

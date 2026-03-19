@@ -1,0 +1,4 @@
+model,dataset,target,horizon,mean_mase,median_mase
+Chronos-Bolt-Small,retail_inventory_daily,Demand,7,0.7087,0.6739
+Chronos-Bolt-Small,retail_inventory_daily,Demand,14,0.7159,0.6884
+Chronos-Bolt-Small,retail_inventory_daily,Demand,28,0.733,0.7209
