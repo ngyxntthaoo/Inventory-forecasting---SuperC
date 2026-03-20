@@ -1,0 +1,4 @@
+model,dataset,target,horizon,lookback,mean_smape,median_smape,mean_mase,median_mase,mean_rmse,median_rmse,mean_rmsle,median_rmsle
+LSTM-EntityEmbedding-GAO,retail_inventory_daily,Units Sold,7,30,37.3175,37.5584,0.7485,0.753,38.976,39.4177,0.5957,0.5785
+LSTM-EntityEmbedding-GAO,retail_inventory_daily,Units Sold,14,30,38.6357,38.6583,0.7741,0.7688,40.0093,40.6772,0.6158,0.5923
+LSTM-EntityEmbedding-GAO,retail_inventory_daily,Units Sold,28,30,38.7668,39.2852,0.7809,0.7869,40.2494,40.2209,0.6232,0.6031

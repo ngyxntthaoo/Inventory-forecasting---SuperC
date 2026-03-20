@@ -1,0 +1,4 @@
+model,dataset,target,horizon,lookback,mean_smape,median_smape,mean_mase,median_mase,mean_rmse,median_rmse,mean_rmsle,median_rmsle
+LSTM-EntityEmbedding-Optuna,retail_inventory_daily,Units Sold,7,14,38.4495,39.0141,0.7756,0.775,40.0837,40.9121,0.6092,0.5969
+LSTM-EntityEmbedding-Optuna,retail_inventory_daily,Units Sold,14,14,38.9854,39.3999,0.7856,0.7799,40.4343,40.8086,0.624,0.6038
+LSTM-EntityEmbedding-Optuna,retail_inventory_daily,Units Sold,28,14,38.7693,39.1277,0.7812,0.7866,40.1227,41.0164,0.6239,0.5918
