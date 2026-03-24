@@ -1,0 +1,4 @@
+ablation,model,dataset,target,horizon,lookback,mean_smape,median_smape,mean_mase,median_mase,mean_rmse,median_rmse,mean_rmsle,median_rmsle
+A2-OneHot,LSTM-OneHot,retail_inventory_daily,Units Sold,7,30,39.8104,40.0664,0.8228,0.8248,42.4854,42.6764,0.6271,0.6173
+A2-OneHot,LSTM-OneHot,retail_inventory_daily,Units Sold,14,30,40.7528,40.8106,0.8317,0.8279,42.6409,41.8792,0.6386,0.6158
+A2-OneHot,LSTM-OneHot,retail_inventory_daily,Units Sold,28,30,39.4777,38.7844,0.8026,0.7927,41.2971,40.7133,0.6306,0.6153

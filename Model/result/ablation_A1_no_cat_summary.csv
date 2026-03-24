@@ -1,0 +1,4 @@
+ablation,model,dataset,target,horizon,lookback,mean_smape,median_smape,mean_mase,median_mase,mean_rmse,median_rmse,mean_rmsle,median_rmsle
+A1-NoCategorical,LSTM-NoCategorical,retail_inventory_daily,Units Sold,7,30,38.8905,39.1894,0.7818,0.7784,40.743,41.3859,0.6088,0.5912
+A1-NoCategorical,LSTM-NoCategorical,retail_inventory_daily,Units Sold,14,30,40.1529,40.9277,0.8165,0.8105,41.8856,42.2329,0.6361,0.6111
+A1-NoCategorical,LSTM-NoCategorical,retail_inventory_daily,Units Sold,28,30,38.6866,38.9577,0.7784,0.7744,40.0967,40.8555,0.6209,0.5889

@@ -1,0 +1,4 @@
+ablation,model,dataset,target,horizon,lookback,mean_smape,median_smape,mean_mase,median_mase,mean_rmse,median_rmse,mean_rmsle,median_rmsle
+A3-Ordinal,LSTM-Ordinal,retail_inventory_daily,Units Sold,7,30,38.5653,38.2589,0.7759,0.7744,40.4504,41.4828,0.6038,0.5834
+A3-Ordinal,LSTM-Ordinal,retail_inventory_daily,Units Sold,14,30,39.9833,40.1794,0.8041,0.8055,41.3212,42.0664,0.6291,0.6066
+A3-Ordinal,LSTM-Ordinal,retail_inventory_daily,Units Sold,28,30,39.3726,39.7867,0.7983,0.8082,40.8792,41.7956,0.6313,0.6095
